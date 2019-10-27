@@ -7,7 +7,7 @@ import javax.persistence.Id
 import javax.persistence.Table
 
 @Entity
-@Table(name = "client")
+@Table(name = "clients")
 class Client(
         @Id
         @Column(name = "id")

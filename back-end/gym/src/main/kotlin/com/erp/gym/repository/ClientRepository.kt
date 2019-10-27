@@ -14,7 +14,7 @@ interface ClientRepository: CrudRepository<Client,Long> {
 
     override fun findAll(): MutableIterable<Client>
 
-    @Query("SELECT c FROM Client c WHERE c.name=:name and c.surname=:surname")
+    @Query("SELECT * FROM clients WHERE name=:name and surname=:surname",  nativeQuery = true)
     fun findUser( @Param("name") name:String, @Param("surname") surname:String):List<Client>
 
 }
